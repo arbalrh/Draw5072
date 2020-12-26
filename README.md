@@ -1,0 +1,1 @@
+# ic-base-netcore
