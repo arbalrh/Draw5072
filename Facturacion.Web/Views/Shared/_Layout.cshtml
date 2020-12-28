@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>@ViewData["Title"] - Facturacion.Web</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/lib/perfect-scrollbar/perfect-scrollbar.css" />
+        <link rel="stylesheet" href="~/lib/cork/plugins/sweetalert2.min.css" />
+        <link rel="stylesheet" href="~/lib/cork/plugins/sweetalert.css" />
+        <link rel="stylesheet" href="~/lib/animate/animate.min.css" />
+        <link rel="stylesheet" href="~/lib/cork/main.css" />
+        <link rel="stylesheet" href="~/lib/cork/structure.css" />
+        <link rel="stylesheet" href="~/lib/highlight/styles/monokai-sublime.css" />
+        <link rel="stylesheet" href="~/css/site/app.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="~/css/app.min.css" />
+    </environment>
+    @RenderSection("Styles", required: false)
+</head>
+<body class="sidebar-noneoverflow">
+    <partial name="~/Views/Shared/Layout/_Header.cshtml" />
+    <div class="main-container" id="container">
+        <div class="overlay"></div>
+        <div class="cs-overlay"></div>
+        <div class="search-overlay"></div>
+        <partial name="~/Views/Shared/Layout/_Sidebar.cshtml" />
+        <div id="content" class="main-content">
+            <div class="layout-px-spacing">
+                @RenderBody()
+            </div>
+            <partial name="~/Views/Shared/Layout/_Footer.cshtml" />
+        </div>
+    </div>
+    <input id="basePath" type="hidden" value="@Url.Content("~/")" />
+    <partial name="_Loading" />
+    <environment include="Development">
+        <script src="~/lib/jquery/jquery-3.1.1.min.js"></script>
+        <script src="~/lib/bootstrap/popper.min.js"></script>
+        <script src="~/lib/bootstrap/bootstrap.min.js"></script>
+        <script src="~/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <script src="~/lib/cork/plugins/sweetalert2.min.js"></script>
+        <script src="~/lib/cork/plugins/toastr.js"></script>
+        <script src="~/lib/cork/app.js"></script>
+        <script src="~/lib/cork/custom.js"></script>
+        <script src="~/lib/axios/axios.js"></script>
+        <script src="~/lib/vue/vue-dev.js"></script>
+        <script src="~/js/app.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="~/js/app.min.js"></script>
+    </environment>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+@section Styles{
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/data-tables/dataTables.bootstrap4.css" />
+        <link rel="stylesheet" href="~/lib/data-tables/responsive.bootstrap4.css" />
+        <link rel="stylesheet" href="~/lib/data-tables/dt-global_style.css" />
+    </environment>
+    <environment exclude="Development">
+    </environment>
+}
+
+<div id="app-usuarios" class="row layout-top-spacing">
+    <div class="col-12 layout-spacing">
+        <div class="widget-content widget-content-area br-6">
+            <div class="row">
+                <div class="col-12">
+                    <form class="form-horizontal mt-md-0 mt-3 text-md-right text-center">
+                        <button type="button" id="myBtn" class="btn btn-primary" @@click="showModal">
+                            Agregar Usuario
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="table-responsive mb-4 mt-4">
+                <table id="grid-bodega" class="table style-3 table-sm table-hover" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>...</th>
+                            <th>...</th>
+                            <th>...</th>
+                            <th>...</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-register" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nuevo Usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group mb-4">
+                        <label for="inputAddress">Correo-e</label>
+                        <input type="email" class="form-control" autocomplete="off" v-model="formUsuario.email">
+                        <div class="invalid-feedback" v-bind:class="[formValidationUsuario.correoRequerido ? 'd-block' : 'd-none']">
+                            Por favor, ingrese el correo del usuario
+                        </div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="inputAddress">Contraseña</label>
+                        <input type="text" class="form-control" autocomplete="off" v-model="formUsuario.password">
+                        <div class="invalid-feedback" v-bind:class="[formValidationUsuario.contraseñaRequerido ? 'd-block' : 'd-none']">
+                            Por favor, ingrese la contraseña
+                        </div>
+                    </div>
+                    @*<div class="form-group row mb-4">
+                        <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Correo-e</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control form-control-sm" v-model="formBodega.nombre">
+                            <div class="invalid-feedback" v-bind:class="[formValidationBodega.nombreRequerido ? 'd-block' : 'd-none']">
+                                Por favor, ingrese el nombre de la bodega
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                        <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Contraseña</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control form-control-sm" v-model="formBodega.direccion">
+                        </div>
+                    </div>*@
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Cancelar</button>
+                    <button type="button" class="btn btn-primary" @@click="createUsuario">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <environment include="Development">
+        <script src="~/lib/data-tables/datatables.js"></script>
+        <script src="~/lib/data-tables/dataTables.bootstrap4.js"></script>
+        <script src="~/lib/data-tables/responsive.bootstrap4.js"></script>
+        <script src="~/js/pages/usuarios/usuarios.js"></script>
+    </environment>
+    <environment exclude="Development">
+    </environment>
+}
+

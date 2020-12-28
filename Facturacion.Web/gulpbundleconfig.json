@@ -1,0 +1,48 @@
+[
+  {
+    "outputFileName": "wwwroot/css/app.min.css",
+    "inputFiles": [
+      "wwwroot/lib/bootstrap/bootstrap.min.css",
+      "wwwroot/lib/perfect-scrollbar/perfect-scrollbar.css",
+      "wwwroot/lib/cork/plugins/sweetalert2.min.css",
+      "wwwroot/lib/cork/plugins/sweetalert.css",
+      "wwwroot/lib/animate/animate.min.css",
+      "wwwroot/lib/cork/main.css",
+      "wwwroot/lib/cork/structure.css",
+      "wwwroot/lib/highlight/styles/monokai-sublime.css",
+      "wwwroot/css/site/app.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/app.min.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery/jquery-3.1.1.min.js",
+      "wwwroot/lib/bootstrap/popper.min.js",
+      "wwwroot/lib/bootstrap/bootstrap.min.js",
+      "wwwroot/lib/perfect-scrollbar/perfect-scrollbar.min.js",
+      "wwwroot/lib/cork/plugins/sweetalert2.min.js",
+      "wwwroot/lib/cork/plugins/toastr.min.js",
+      "wwwroot/lib/cork/app.js",
+      "wwwroot/lib/cork/custom.js",
+      "wwwroot/lib/axios/axios.js",
+      "wwwroot/lib/vue/vue-dev.js",
+      "wwwroot/js/app.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/pages/clientes/clientes.min.css",
+    "inputFiles": [
+      "wwwroot/lib/data-tables/dataTables.bootstrap4.min.css",
+      "wwwroot/lib/data-tables/responsive.bootstrap4.min.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/pages/clientes/clientes.min.js",
+    "inputFiles": [
+      "wwwroot/lib/data-tables/datatables.min.js",
+      "wwwroot/lib/data-tables/dataTables.bootstrap4.min.js",
+      "wwwroot/lib/data-tables/responsive.bootstrap4.min.js",
+      "wwwroot/js/pages/clientes/clientes.js"
+    ]
+  }
+]

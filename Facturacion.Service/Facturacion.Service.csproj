@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Facturacion.Entities\Facturacion.Entities.csproj" />
+    <ProjectReference Include="..\Facturacion.Repository\Facturacion.Repository.csproj" />
+    <ProjectReference Include="..\Facturacion.Utils\Facturacion.Utils.csproj" />
+  </ItemGroup>
+
+</Project>
